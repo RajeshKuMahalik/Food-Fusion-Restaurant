@@ -20,7 +20,7 @@ const FeedBack = ({onSubmit}) => {
     const handleSubmit = async (e) => {
       e.preventDefault();
      try {
-      const res = await axios.post("http://localhost:4000/api/feedback", formData)
+      const res = await axios.post("https://food-fusion-restaurant-backend.onrender.com/api/feedback", formData)
       setMessage(res.data.message);
       setFormData({name: "", email:"", message:""})
      } catch (error) {
