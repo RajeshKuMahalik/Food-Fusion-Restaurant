@@ -25,7 +25,7 @@ const Reservation = ({ token }) => {
 
     const removeReservation = async (id) => {
         try {
-            const response = await axios.post('http://localhost:4000/api/reservation', {id}, { headers: { token } })
+            const response = await axios.post('https://food-fusion-restaurant-backend.onrender.com/api/reservation', {id}, { headers: { token } })
             if (response.data.success) {
                 toast.success(response.data.message)
                 await AllReservation()
