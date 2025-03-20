@@ -11,7 +11,7 @@ const Feedback = () => {
 
   const AllFeedback = async () =>{
     try{
-      const response = await axios.get('http://localhost:4000/api/feedbacks/all')
+      const response = await axios.get('https://food-fusion-restaurant-backend.onrender.com/api/feedbacks/all')
       if(response.data.success){
         setFeedback(response.data.feedbacks)
       } else {
