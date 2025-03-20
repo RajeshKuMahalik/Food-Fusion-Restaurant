@@ -45,7 +45,7 @@ const PlaceOrder = () => {
 
         try {
 
-          const { data } = await axios.post("http://localhost:4000/api/order/verifyRazorpay", response, { headers: { token } })
+          const { data } = await axios.post("https://food-fusion-restaurant-backend.onrender.com/api/order/verifyRazorpay", response, { headers: { token } })
           if (data.success) {
             navigate('/orders')
             setCartItems({})
@@ -85,7 +85,7 @@ const PlaceOrder = () => {
 
         //API Calls for COD
         case 'cod':
-          const response = await axios.post('http://localhost:4000/api/order/place', orderData, { headers: { token } })
+          const response = await axios.post('https://food-fusion-restaurant-backend.onrender.com/api/order/place', orderData, { headers: { token } })
           if (response.data.success) {
             setCartItems({})
             navigate('/orders')
@@ -95,7 +95,7 @@ const PlaceOrder = () => {
           break;
         case 'razorpay':
 
-          const responseRazorpay = await axios.post("http://localhost:4000/api/order/razorpay", orderData, { headers: { token } })
+          const responseRazorpay = await axios.post("https://food-fusion-restaurant-backend.onrender.com/api/order/razorpay", orderData, { headers: { token } })
           if (responseRazorpay.data.success) {
             initPay(responseRazorpay.data.order);
 
