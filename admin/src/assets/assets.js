@@ -18,4 +18,4 @@ export const assets ={
     parcel
 }
 
-export const url = 'http://localhost:4000'
+export const url = 'https://food-fusion-restaurant-backend.onrender.com'
