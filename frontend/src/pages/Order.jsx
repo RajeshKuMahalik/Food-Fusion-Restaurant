@@ -15,7 +15,7 @@ const Order = () => {
                 return null
             }
 
-            const response = await axios.post("http://localhost:4000/api/order/userorder", {}, { headers: { token } })
+            const response = await axios.post("https://food-fusion-restaurant-backend.onrender.com/api/order/userorder", {}, { headers: { token } })
             if (response.data.success) {
                 let allOrdersItem = []
                 response.data.orders.map((order) => {
