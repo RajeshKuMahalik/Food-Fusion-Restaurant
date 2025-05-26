@@ -28,7 +28,7 @@ const ReservationFrom = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4000/api/reserve", formData);
+      await axios.post("https://food-fusion-restaurant-backend.onrender.com/api/reserve", formData);
       toast("Reservation successful!");
       setFormData({ name: "", email: "", phone: "", date: "", time: "", guests: "", tableNumber: "" });
     } catch (error) {
